@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ImageIcon } from "./ui/Icons";
 
 interface GalleryImage {
   src: string;
@@ -56,11 +55,6 @@ export function PhotoGallery({ images }: PhotoGalleryProps) {
           </div>
         ))}
 
-        {/* More Photos placeholder */}
-        <div className="relative aspect-square rounded-[14px] border-2 border-dashed border-border-light flex flex-col items-center justify-center gap-2 text-text-secondary hover:-translate-y-1 transition-transform duration-200 cursor-pointer">
-          <ImageIcon className="w-6 h-6" />
-          <span className="text-[11px] font-body">More Photos</span>
-        </div>
       </div>
     </div>
   );
