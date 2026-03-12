@@ -1,3 +1,5 @@
+"use client";
+
 import { SectionLabel } from "./ui/SectionLabel";
 import { CheckIcon, ArrowRightIcon } from "./ui/Icons";
 import { PhotoGallery } from "./PhotoGallery";
