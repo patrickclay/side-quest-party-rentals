@@ -1,5 +1,6 @@
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
+import { HowItWorks } from "./components/HowItWorks";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        {/* HowItWorks goes here */}
+        <HowItWorks />
         {/* Nerf Package and Lawn Games go here later */}
         {/* Coming Soon goes here later */}
         {/* Reviews goes here */}
