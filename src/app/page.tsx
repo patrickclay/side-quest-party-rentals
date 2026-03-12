@@ -1,6 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { HowItWorks } from "./components/HowItWorks";
+import { NerfPackage } from "./components/NerfPackage";
 import { Reviews } from "./components/Reviews";
 import { FAQ } from "./components/FAQ";
 import { Footer } from "./components/Footer";
@@ -13,7 +14,8 @@ export default function Home() {
       <main>
         <Hero />
         <HowItWorks />
-        {/* Nerf Package and Lawn Games go here later */}
+        <NerfPackage />
+        {/* Lawn Games goes here later */}
         {/* Coming Soon goes here later */}
         <Reviews />
         <FAQ />
