@@ -73,7 +73,7 @@ Expected: App starts at localhost:3000 with default Next.js page.
 - [ ] **Step 6: Commit**
 
 ```bash
-git add -A
+git add package.json package-lock.json tsconfig.json next.config.ts tailwind.config.ts postcss.config.mjs .env.local.example .gitignore src/ public/
 git commit -m "chore: scaffold Next.js 15 project with Tailwind and Resend"
 ```
 
@@ -1002,7 +1002,7 @@ export async function POST(request: NextRequest) {
     const weekend = formatWeekend(data.pickupDate);
     const gamesList = data.selectedGames.length > 0 ? data.selectedGames.join(", ") : "None";
     const packageNames = [
-      data.packages.nerfWar && "Nerf War Package ($60)",
+      data.packages.nerfWar && `Nerf War Package ($${PRICING.nerfWar})`,
       data.packages.lawnGames && `${data.lawnGameCount} Lawn Games ($${data.totalPrice - (data.packages.nerfWar ? PRICING.nerfWar : 0)})`,
     ].filter(Boolean).join(" + ");
 
