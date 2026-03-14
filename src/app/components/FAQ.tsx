@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "How far in advance should I book?",
-    a: "We recommend booking at least 1 week ahead. Popular weekends (holidays, end of school year) book up fast, so the earlier the better.",
+    a: "We recommend booking at least 1 month ahead. Popular weekends (holidays, end of school year) book up fast, so the earlier the better.",
   },
   {
     q: "What's included in each package?",

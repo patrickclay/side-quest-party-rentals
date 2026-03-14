@@ -4,26 +4,26 @@ import { useState } from "react";
 import Image from "next/image";
 import { SectionLabel } from "./ui/SectionLabel";
 import { SectionTitle } from "./ui/SectionTitle";
-import { LockIcon, DropletIcon, FilmIcon, GlobeIcon, SendIcon } from "./ui/Icons";
+import { LockIcon, PackageIcon, FilmIcon, StarIcon, SendIcon } from "./ui/Icons";
 
 const lockedQuests = [
   {
-    icon: DropletIcon,
-    glow: "shadow-[0_0_20px_rgba(43,94,167,.3)]",
-    hint: "Splash Zone?",
-    color: "text-royal-blue",
+    icon: PackageIcon,
+    glow: "shadow-[0_0_20px_rgba(245,166,35,.3)]",
+    hint: "Snack Machines",
+    color: "text-quest-orange",
   },
   {
     icon: FilmIcon,
     glow: "shadow-[0_0_20px_rgba(245,166,35,.3)]",
-    hint: "Movie Night?",
+    hint: "Movie Night",
     color: "text-quest-gold",
   },
   {
-    icon: GlobeIcon,
-    glow: "shadow-[0_0_20px_rgba(46,204,113,.3)]",
-    hint: "Field Day?",
-    color: "text-forest-green",
+    icon: StarIcon,
+    glow: "shadow-[0_0_20px_rgba(220,38,38,.3)]",
+    hint: "Red Carpet Event",
+    color: "text-hero-red",
   },
 ];
 

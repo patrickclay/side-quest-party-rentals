@@ -84,9 +84,9 @@ export function Hero() {
           <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8 max-w-[520px]">
             Everything you need for{" "}
             <span className="text-white font-bold">epic birthdays</span>,
-            cookouts, and backyard battles — delivered for a full weekend
-            starting at just{" "}
-            <span className="text-white font-bold">$20</span>.
+            cookouts, and backyard battles — starting at just{" "}
+            <span className="text-white font-bold">$20</span> for the full
+            weekend.
           </p>
 
           {/* CTAs */}
