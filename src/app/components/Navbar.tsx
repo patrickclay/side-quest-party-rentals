@@ -24,8 +24,8 @@ export function Navbar() {
             src="/logo.png"
             alt="Side Quest Party Rentals"
             width={160}
-            height={66}
-            className="h-[60px] w-auto"
+            height={107}
+            className="h-[50px] w-auto"
             priority
           />
         </a>

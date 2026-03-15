@@ -117,9 +117,9 @@ export function Hero() {
         <Image
           src="/logo.png"
           alt="Side Quest Party Rentals"
-          width={180}
+          width={270}
           height={180}
-          className="w-[180px] h-auto"
+          className="w-[240px] h-auto"
         />
       </div>
     </section>

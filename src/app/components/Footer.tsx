@@ -22,9 +22,9 @@ export function Footer() {
             <Image
               src="/logo.png"
               alt="Side Quest Party Rentals"
-              width={120}
+              width={180}
               height={120}
-              className="h-[120px] w-auto mb-4"
+              className="h-[100px] w-auto mb-4"
             />
             <p className="text-white/60 text-sm leading-relaxed">
               Weekend party rental gear for epic backyard adventures in the
