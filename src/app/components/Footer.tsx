@@ -40,19 +40,19 @@ export function Footer() {
             <ul className="space-y-3 text-white/60 text-sm">
               <li>
                 <a
-                  href="tel:7705550199"
+                  href="tel:4043956339"
                   className="flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <PhoneIcon className="w-4 h-4 text-quest-gold" />
-                  (770) 555-0199
+                  (404) 395-6339
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@sidequestpartyrentals.com"
+                  href="mailto:SideQuestPartyRentals@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  info@sidequestpartyrentals.com
+                  SideQuestPartyRentals@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -89,12 +89,12 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-white/60 text-sm">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.facebook.com/SideQuestPartyRentals/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.instagram.com/side.quest.party.rentals" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   Instagram
                 </a>
               </li>

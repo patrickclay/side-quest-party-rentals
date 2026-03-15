@@ -223,7 +223,7 @@ export function ReserveForm({ initialPackages, initialGames }: ReserveFormProps)
                     value={phone}
                     onChange={(e) => { setPhone(e.target.value); setErrors((p) => { const n = {...p}; delete n.phone; return n; }); }}
                     className={`w-full border-2 rounded-xl px-4 py-3 font-body text-sm text-navy outline-none transition-colors ${errors.phone ? "border-hero-red" : "border-border-light focus:border-royal-blue"}`}
-                    placeholder="(770) 555-0199"
+                    placeholder="(404) 395-6339"
                   />
                   {errors.phone && <p className="text-hero-red text-xs mt-1 font-body">{errors.phone}</p>}
                 </div>

@@ -94,7 +94,7 @@ export function Hero() {
             <Button href="#nerf-package" variant="primary">
               Browse Packages
             </Button>
-            <Button href="tel:7705550199" variant="secondary">
+            <Button href="tel:4043956339" variant="secondary">
               <PhoneIcon className="w-5 h-5" />
               Call or Text Us
             </Button>

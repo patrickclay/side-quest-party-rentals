@@ -43,11 +43,11 @@ export function Navbar() {
           ))}
 
           <a
-            href="tel:7705550199"
+            href="tel:4043956339"
             className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm"
           >
             <PhoneIcon className="w-4 h-4" />
-            (770) 555-0199
+            (404) 395-6339
           </a>
 
           <Button href="#reserve" variant="primary" className="!py-2.5 !px-6 !text-sm">
@@ -85,11 +85,11 @@ export function Navbar() {
             ))}
 
             <a
-              href="tel:7705550199"
+              href="tel:4043956339"
               className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
             >
               <PhoneIcon className="w-4 h-4" />
-              (770) 555-0199
+              (404) 395-6339
             </a>
 
             <Button
