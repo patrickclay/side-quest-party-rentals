@@ -48,6 +48,24 @@ describe("validateReservation", () => {
     expect(result.errors.packages).toBeDefined();
   });
 
+  it("fails with a past pickup date", () => {
+    const result = validateReservation({ ...validData, pickupDate: "2024-01-05" });
+    expect(result.valid).toBe(false);
+    expect(result.errors.pickupDate).toBeDefined();
+  });
+
+  it("fails with today's date as pickup date", () => {
+    const today = new Date();
+    const day = today.getUTCDay();
+    const daysUntilFriday = day === 5 ? 0 : (5 - day + 7) % 7;
+    if (daysUntilFriday === 0) {
+      const todayStr = today.toISOString().split("T")[0];
+      const result = validateReservation({ ...validData, pickupDate: todayStr, totalPrice: 60 });
+      expect(result.valid).toBe(false);
+      expect(result.errors.pickupDate).toContain("future");
+    }
+  });
+
   it("fails with mismatched total price", () => {
     const result = validateReservation({ ...validData, totalPrice: 999 });
     expect(result.valid).toBe(false);

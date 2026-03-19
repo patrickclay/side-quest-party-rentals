@@ -41,6 +41,13 @@ export function validateReservation(data: ReservationData): ValidationResult {
     errors.pickupDate = "Pickup date is required";
   } else if (!isFriday(data.pickupDate)) {
     errors.pickupDate = "Pickup date must be a Friday";
+  } else {
+    const pickup = new Date(data.pickupDate + "T00:00:00Z");
+    const today = new Date();
+    today.setUTCHours(0, 0, 0, 0);
+    if (pickup <= today) {
+      errors.pickupDate = "Pickup date must be in the future";
+    }
   }
 
   const expectedTotal = calculateTotal(data.packages, data.lawnGameCount);
