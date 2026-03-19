@@ -51,6 +51,14 @@ export function ReserveForm({ initialPackages, initialGames }: ReserveFormProps)
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [submitError, setSubmitError] = useState("");
+  const [bookedDates, setBookedDates] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    fetch("/api/availability")
+      .then((res) => res.json())
+      .then((data) => setBookedDates(new Set(data.bookedDates)))
+      .catch(() => {});
+  }, []);
 
   // Apply initial values when props change
   useEffect(() => {
@@ -95,15 +103,24 @@ export function ReserveForm({ initialPackages, initialGames }: ReserveFormProps)
       setDateHelper("");
       return;
     }
+
+    let resolvedDate = value;
     if (isFriday(value)) {
-      setPickupDate(value);
       setDateHelper("");
     } else {
       const nextFri = getNextFriday(new Date(value));
-      const formatted = nextFri.toISOString().split("T")[0];
-      setPickupDate(formatted);
-      setDateHelper(`Pickup adjusted to Friday: ${formatted}`);
+      resolvedDate = nextFri.toISOString().split("T")[0];
+      setDateHelper(`Pickup adjusted to Friday: ${resolvedDate}`);
     }
+
+    if (bookedDates.has(resolvedDate)) {
+      setPickupDate("");
+      setDateHelper("");
+      setErrors((prev) => ({ ...prev, pickupDate: "That weekend is already booked" }));
+      return;
+    }
+
+    setPickupDate(resolvedDate);
     setErrors((prev) => {
       const next = { ...prev };
       delete next.pickupDate;
