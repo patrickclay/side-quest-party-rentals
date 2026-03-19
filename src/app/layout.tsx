@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Side Quest Party Rentals — Level Up Your Party",
     description:
       "DIY party rental packages starting at $20. Nerf wars, giant lawn games & more. Full weekend rentals in greater Atlanta.",
-    url: "https://sidequestpartyrentals.com",
+    url: "https://sidequestpr.com",
     siteName: "Side Quest Party Rentals",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     locale: "en_US",

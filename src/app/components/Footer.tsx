@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PhoneIcon, MapPinIcon } from "./ui/Icons";
 
 const quickLinks = [
@@ -108,12 +109,12 @@ export function Footer() {
         <div className="max-w-[var(--max-width-content)] mx-auto px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/40 text-xs">
           <p>2026 Side Quest Party Rentals. All rights reserved.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/terms-of-service" className="hover:text-white transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

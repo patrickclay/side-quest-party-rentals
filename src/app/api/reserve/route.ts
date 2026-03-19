@@ -21,17 +21,17 @@ export async function POST(request: NextRequest) {
     if (process.env.RESEND_API_KEY) {
       const { Resend } = await import("resend");
       const resend = new Resend(process.env.RESEND_API_KEY);
-      const notificationEmail = process.env.NOTIFICATION_EMAIL || "owner@sidequestpartyrentals.com";
+      const notificationEmail = process.env.NOTIFICATION_EMAIL || "SideQuestPartyRentals@gmail.com";
 
       await resend.emails.send({
-        from: "Side Quest Reservations <reservations@sidequestpartyrentals.com>",
+        from: "Side Quest Reservations <reservations@sidequestpr.com>",
         to: notificationEmail,
         subject: `New Reservation: ${packageNames} — ${data.pickupDate}`,
         text: `New reservation from ${data.name}!\n\nPackage(s): ${packageNames}\nGames: ${gamesList}\nTotal: $${data.totalPrice}\n\nWeekend: ${weekend}\nGuests: ${data.estimatedGuests || "Not specified"}\n\nCustomer Info:\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\nCity: ${data.city}\n\nNotes: ${data.message || "None"}`,
       });
 
       await resend.emails.send({
-        from: "Side Quest Party Rentals <reservations@sidequestpartyrentals.com>",
+        from: "Side Quest Party Rentals <reservations@sidequestpr.com>",
         to: data.email,
         subject: "Your Side Quest Reservation Request",
         text: `Hey ${data.name}!\n\nThanks for your reservation request. Here's what we have:\n\nPackage(s): ${packageNames}\n${data.selectedGames.length > 0 ? `Games: ${gamesList}\n` : ""}Total: $${data.totalPrice}\nWeekend: ${weekend}\n\nWe'll confirm your reservation within a few hours. If you have questions, call or text us at (770) 555-0199.\n\n— Side Quest Party Rentals`,
