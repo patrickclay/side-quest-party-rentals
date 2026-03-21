@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
     if (process.env.RESEND_API_KEY) {
       const { Resend } = await import("resend");
       const resend = new Resend(process.env.RESEND_API_KEY);
-      const notificationEmail = process.env.NOTIFICATION_EMAIL || "ambs0976@gmail.com";
+      const notificationEmail = process.env.NOTIFICATION_EMAIL || "sidequestpartyrentals@gmail.com";
 
       await resend.emails.send({
         from: "Side Quest Reservations <reservations@sidequestpr.com>",
